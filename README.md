@@ -2,13 +2,15 @@
 
 ## Personal Blog Template / Nuxt.js
 
-![img](https://github.com/HamidEidy/personal-blog/assets/148962898/e9627ed3-b011-4b29-8585-b418b00c41e7)
+![img](https://github.com/HamidEidy/personal-blog/assets/148962898/528089fb-1bd1-404d-94f8-b446cac67f5e)
 
 
 
 
 
-![img2](https://github.com/HamidEidy/personal-blog/assets/148962898/2214d75d-75d9-47d8-b8d1-2a03da9cd2bf)
+
+![img2](https://github.com/HamidEidy/personal-blog/assets/148962898/0e270afc-15e0-4f79-9ec9-92a6e4606562)
+
 
 ## Setup
 
