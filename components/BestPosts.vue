@@ -1,54 +1,51 @@
 <template>
-  <div class="row layoutPadding">
-    <div class="col-sm-4 mb-3 mb-sm-0">
-      <div>
-        <img src="../55.avif" class="card-img-top" alt="..." />
-        <div class="text-start">
-          <div class="d-flex justify-content-between mt-3">
-            <p class="text-warning">سفر</p>
-            <small class="text-body-secondary">1402/02/15</small>
+  <ClientOnly>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-sm-0"
+        v-for="item in data.slice(1, 4)"
+        :key="item.id"
+        @click="showid(item)"
+      >
+        <div style="height: 100%; padding-top: 50px">
+          <img src="../55.avif" class="card-img-top" alt="..." />
+
+          <div class="text-start">
+            <div class="d-flex justify-content-between mt-3">
+              <!-- <p class="text-warning">{{ item.category }}</p> -->
+              <p class="text-body-secondary d-inline">1402/02/15</p>
+              <nuxt-link :to="`/${item.id}`"
+                ><h1>{{ item.title }}</h1></nuxt-link
+              >
+            </div>
+
+            <p class="card-text">
+              {{ item.description }}
+            </p>
           </div>
-          <h5>متن تست</h5>
-          <p class="card-text">
-            لنب خیسزح خیخسزح میسحجز میمحسزج م جمیسزج مجیمرجمسی مجمیسزجمیس حمیزحم
-            حیسمیرسزحجم یحسمزمج
-          </p>
+          <nuxt-link :to="`/${item.id}`">
+            <i class="bi bi-arrows-fullscreen"></i>
+          </nuxt-link>
         </div>
+        <hr />
       </div>
     </div>
-
-    <div class="col-sm-4 mb-3 mb-sm-0">
-        <div>
-          <img src="../55.avif" class="card-img-top" alt="..." />
-          <div class="text-start">
-            <div class="d-flex justify-content-between mt-3">
-              <p class="text-info">ورزش</p>
-              <small class="text-body-secondary">1402/02/15</small>
-            </div>
-            <h5>متن تست</h5>
-            <p class="card-text">
-              لنب خیسزح خیخسزح میسحجز میمحسزج م جمیسزج مجیمرجمسی مجمیسزجمیس حمیزحم
-              حیسمیرسزحجم یحسمزمج
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4 mb-3 mb-sm-0">
-        <div>
-          <img src="../55.avif" class="card-img-top" alt="..." />
-          <div class="text-start">
-            <div class="d-flex justify-content-between mt-3">
-              <p class="text-success">تکنولوژی</p>
-              <small class="text-body-secondary">1402/02/15</small>
-            </div>
-            <h5>متن تست</h5>
-            <p class="card-text">
-              لنب خیسزح خیخسزح میسحجز میمحسزج م جمیسزج مجیمرجمسی مجمیسزجمیس حمیزحم
-              حیسمیرسزحجم یحسمزمج
-            </p>
-          </div>
-        </div>
-      </div>
-  </div>
+  </ClientOnly>
 </template>
+
+<script setup>
+import data from "../data/popularPosts.json";
+</script>
+
+<style scoped>
+h1 {
+  font-size: 20px;
+  color: rgb(31, 31, 31);
+  text-decoration: none !important;
+  display: inline;
+}
+a {
+  text-decoration: none;
+  display: inline;
+}
+</style>

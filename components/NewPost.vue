@@ -1,15 +1,33 @@
 <template>
-    <div class="row layoutPadding"> 
-      <div class="col-md-6 py-3">
+  <ClientOnly>
+    <div class="row layoutPadding mt-5" @click="console.log(content.id)">
+      <div class="col-lg-6 col-md-12 py-3">
         <div class="text-start pe-3">
-            <small class="badge bg-danger ">آخرین مقاله</small>
-          <h5 class="fs-2 fw-bold">متن تست</h5>
-          <p class="card-text">متن تست سشیعتز ی۹زته ۹یتز۹ تیس۹تز۰ یخنزخشس۰خن سیه۹زسی۰خن سیزمحیسزم یججحزمیجسجم یسنمزجحمی ینمزمنجم سحیمزجحمسجشحزمسجحمیرخسنیحخنزشسحزخنشیخظنزشسحنجحزطمطحزم</p>
-                <button type="button" class=" bluebtn">مطالعه کامل</button>
+          <small class="badge bg-danger">آخرین مقاله</small>
+          <h5 class="fs-2 fw-bold">{{ content[0].title }}</h5>
+          <p class="card-text">{{ content[0].description }}</p>
+          <nuxt-link :to="`/${content[0].id}`" class="bluebtn"
+            >مطالعه کامل</nuxt-link
+          >
         </div>
       </div>
-      <div class="col-md-6 ">
-        <img src="../55.AVIF" style="height: 220px; width:100%" class="img-fluid shadow-3-strong shadow-lg" alt="...">
+
+      <div class="col-lg-6 col-md-12">
+        <img
+          src="../55.AVIF"
+          style="height: 220px; width: 100%"
+          class="img-fluid shadow-3-strong shadow-lg"
+          alt="..."
+        />
       </div>
     </div>
+  </ClientOnly>
 </template>
+
+<script setup>
+import content from "../data/popularPosts.json";
+let data = JSON.stringify(content);
+</script>
+
+<style scoped>
+</style>
