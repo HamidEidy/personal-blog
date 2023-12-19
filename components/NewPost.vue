@@ -14,7 +14,7 @@
 
       <div class="col-lg-6 col-md-12">
         <img
-          src="../55.AVIF"
+          src="../assets/images/55.avif"
           style="height: 220px; width: 100%"
           class="img-fluid shadow-3-strong shadow-lg"
           alt="..."

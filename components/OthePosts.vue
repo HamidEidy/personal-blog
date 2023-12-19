@@ -15,12 +15,12 @@
                   style="font-size: 16px; font-weight: bold"
                   >{{ item.title }}</nuxtLink
                 >
-                <p class="text-body-secondary">1402/09/26</p>
+                <p class="text-body-secondary">{{item.date}}</p>
               </div>
             </div>
             <div class="col-4">
               <img
-                src="../55.avif"
+                src="../assets/images/55.avif"
                 class="img-fluid shadow-2-strong"
                 alt="..."
                 style="width: 100%"

@@ -8,12 +8,12 @@
         @click="showid(item)"
       >
         <div style="height: 100%; padding-top: 50px">
-          <img src="../55.avif" class="card-img-top" alt="..." />
+          <img src="../assets/images/55.avif" class="card-img-top" alt="..." />
 
           <div class="text-start">
             <div class="d-flex justify-content-between mt-3">
               <!-- <p class="text-warning">{{ item.category }}</p> -->
-              <p class="text-body-secondary d-inline">1402/02/15</p>
+              <p class="text-body-secondary d-inline">{{ item.date }}</p>
               <nuxt-link :to="`/${item.id}`"
                 ><h1>{{ item.title }}</h1></nuxt-link
               >
